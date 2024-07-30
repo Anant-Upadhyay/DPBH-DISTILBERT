@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Dark Pattern Detector</h1>
+        <form method="POST" action="/">
+            <div class="input-group">
+                <input type="text" name="inputText" placeholder="Enter text here...">
+                <button type="submit">Detect!!</button>
+            </div>
+        </form>
+        {% if outputText %}
+        <div id="outputText" class="output-text">{{ outputText }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
